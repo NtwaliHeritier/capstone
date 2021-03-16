@@ -2,15 +2,17 @@ import React from 'react';
 import '../css/index.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
 import { ADD_COMPANY_INFO } from '../actions/stock_action';
 
 const Stocks = () => {
   const stocks = useSelector(store => store.stocks);
+  const history = useHistory();
   const dispatch = useDispatch();
   const handleClick = async symbol => {
-    const companyInfo = await (`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=18e14f4a06420f6541dc232dea254989`);
-    dispatch(ADD_COMPANY_INFO(companyInfo));
-    useHistory().push('/info');
+    const companyInfo = await axios.get(`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=18e14f4a06420f6541dc232dea254989`);
+    dispatch(ADD_COMPANY_INFO(companyInfo.data[0]));
+    history.push('/info');
   };
   return (
     <section className="companies mt-3">
