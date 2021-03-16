@@ -1,12 +1,14 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
 import { useDispatch } from 'react-redux';
 import Navbar from './components/Navbar';
 import Stocks from './components/Stocks';
 import './css/index.css';
 import './App.css';
-import ADD_TO_STOCK from './actions/stock_action';
+import { ADD_TO_STOCK } from './actions/stock_action';
+import Info from './components/Info';
 
 function App() {
   const dispatch = useDispatch();
@@ -40,7 +42,12 @@ function App() {
   return (
     <div className="body">
       <Navbar />
-      <Stocks />
+      <BrowserRouter>
+        <Switch>
+          <Route component={Stocks} path="/stocks" />
+          <Route component={Info} path="/info" />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

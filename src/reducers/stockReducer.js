@@ -1,4 +1,4 @@
-const stockReducer = (stock, action) => {
+const stockReducer = (stock = {}, action) => {
   switch (action.type) {
     case 'ADD_TO_STOCK':
       return action.payload;

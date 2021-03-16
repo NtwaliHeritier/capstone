@@ -1,0 +1,19 @@
+.stock-title {
+	color: #00c4a7;
+	font-size: 2.5em;
+}
+
+.stock-title:hover {
+	color: white;
+}
+
+.stock-details img {
+	width: 30vw;
+	height: 50vh;
+	display: block;
+	margin: 0 auto;
+}
+
+.stock-details-p {
+	font-size: 18px;
+}
