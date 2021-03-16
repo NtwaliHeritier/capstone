@@ -1,27 +1,23 @@
-import logo from './logo.svg';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import Stocks from './components/Stocks';
 
 function App() {
+  const [stocks, setStock] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const stockApi = await axios.get('https://financialmodelingprep.com/api/v3/stock/list?apikey=c2ea40d4e9b1d03067a58a27521c202e');
+      setStock(stockApi.data);
+    };
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <Navbar />
+      <Stocks stocks={stocks} />
     </div>
   );
 }
