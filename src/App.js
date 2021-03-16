@@ -1,23 +1,46 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import './App.css';
+import Loader from 'react-loader-spinner';
+import { useDispatch } from 'react-redux';
 import Navbar from './components/Navbar';
 import Stocks from './components/Stocks';
+import './css/index.css';
+import './App.css';
+import ADD_TO_STOCK from './actions/stock_action';
 
 function App() {
-  const [stocks, setStock] = useState([]);
+  const dispatch = useDispatch();
+  const [loader, setLoader] = useState(true);
+
+  const fetchData = async () => {
+    setLoader(true);
+    const stockApi = await axios.get('https://financialmodelingprep.com/api/v3/stock/list?apikey=18e14f4a06420f6541dc232dea254989');
+    dispatch(ADD_TO_STOCK(stockApi.data));
+    setLoader(false);
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
-      const stockApi = await axios.get('https://financialmodelingprep.com/api/v3/stock/list?apikey=c2ea40d4e9b1d03067a58a27521c202e');
-      setStock(stockApi.data);
-    };
     fetchData();
   }, []);
+
+  if (loader) {
+    return (
+      <div className="loader-div mt-5 ml-5">
+        <Loader
+          type="Puff"
+          color="#00BFFF"
+          height={100}
+          width={100}
+          timeout={3000}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="body">
       <Navbar />
-      <Stocks stocks={stocks} />
+      <Stocks />
     </div>
   );
 }
