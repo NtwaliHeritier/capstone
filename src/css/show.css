@@ -8,10 +8,14 @@
 }
 
 .stock-details img {
-	width: 30vw;
-	height: 50vh;
+	width: 10vw;
+	height: 30vh;
 	display: block;
 	margin: 0 auto;
+}
+
+.stock-details span {
+	font-size: 18px;
 }
 
 .stock-details-p {

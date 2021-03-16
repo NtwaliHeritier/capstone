@@ -27,7 +27,7 @@ function App() {
 
   if (loader) {
     return (
-      <div className="loader-div mt-5 ml-5">
+      <div className="loader-div d-flex align-items-center justify-content-center">
         <Loader
           type="Puff"
           color="#00BFFF"

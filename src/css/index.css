@@ -16,6 +16,10 @@
 	color: #00c4a7;
 }
 
+.loader-div {
+	height: 100vh;
+}
+
 .companies {
 	display: flex;
 	flex-wrap: wrap;
