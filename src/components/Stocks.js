@@ -17,14 +17,14 @@ const Stocks = () => {
   return (
     <section className="companies mt-3">
       {stocks.map(stock => (
-        <div key={stock.symbol} className="company">
-          <h5 className="text-white">{stock.name}</h5>
-          <span className="symbol">{stock.symbol}</span>
+        <div key={stock.ticker} className="company">
+          <h5 className="text-white">{stock.companyName}</h5>
+          <span className="symbol">{stock.ticker}</span>
           <div className="finances mt-3 mb-4">
-            <span className="price">{stock.price}</span>
-            <span>{stock.exchange}</span>
+            <span className={stock.changes > 0 ? 'price' : 'text-danger'}>{stock.changes}</span>
+            <span>{stock.price}</span>
           </div>
-          <button type="submit" className="details btn" onClick={() => handleClick(stock.symbol)}>Details</button>
+          <button type="submit" className="details btn" onClick={() => handleClick(stock.ticker)}>Details</button>
         </div>
       ))}
     </section>

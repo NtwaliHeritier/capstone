@@ -16,7 +16,7 @@ function App() {
 
   const fetchData = async () => {
     setLoader(true);
-    const stockApi = await axios.get('https://financialmodelingprep.com/api/v3/stock/list?apikey=18e14f4a06420f6541dc232dea254989');
+    const stockApi = await axios.get('https://financialmodelingprep.com/api/v3/actives?apikey=18e14f4a06420f6541dc232dea254989');
     dispatch(ADD_TO_STOCK(stockApi.data));
     setLoader(false);
   };

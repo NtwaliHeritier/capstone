@@ -15,11 +15,11 @@ const Info = () => {
             {info.mktCap}
           </span>
           <span>
-            CEO:
+            CEO:&nbsp;
             {info.ceo}
           </span>
           <span>
-            Industry:
+            Industry:&nbsp;
             {info.industry}
           </span>
         </div>
