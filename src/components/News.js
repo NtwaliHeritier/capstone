@@ -21,7 +21,7 @@ const News = () => {
                 <h5 className="text-center my-2">{myNew.title}</h5>
                 <span className="p-2 my-2 d-block">Published on: &nbsp;{myNew.publishedDate}</span>
                 <p>{myNew.text}</p>
-                <a className="details btn" href={myNew.url}>READ MORE</a>
+                <a className="details btn" href={myNew.url} target="_blank">READ MORE</a>
               </div>
             </div>
         )}
