@@ -18,6 +18,8 @@ In this project, I fetched data from a finance api and used react and redux to b
 ## Screenshots
 
 ![screenshot](./screenshots/index.PNG)
+![screenshot](./screenshots/show.PNG)
+![screenshot](./screenshots/news.PNG)
 
 ## Built With 🛠
 
