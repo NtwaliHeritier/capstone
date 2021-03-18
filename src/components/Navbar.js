@@ -5,17 +5,10 @@ import { ADD_FILTER } from '../actions/stock_action';
 import '../css/index.css';
 
 const Navbar = () => {
-  const stocks = useSelector(store => store.stocks);
   const dispatch = useDispatch();
   const handleChange = e => {
     const filter = e.target.value;
-    let filteredStock;
-    if(e.target.value === '') {
-      filteredStock = stocks;
-    } else {
-    filteredStock = stocks.filter(s => s.companyName.startsWith(filter.charAt(0).toLocaleUpperCase() + filter.slice(1)));
-    }
-    dispatch(ADD_FILTER(filteredStock));
+    dispatch(ADD_FILTER(filter));
   };
 
   return (

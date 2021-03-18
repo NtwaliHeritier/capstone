@@ -8,7 +8,14 @@ import { ADD_COMPANY_INFO } from '../actions/stock_action';
 const Stocks = () => {
   const stocks = useSelector(store => store.stocks);
   const filter = useSelector(store => store.filter);
-  const filtered = filter ? filter : stocks; 
+  
+  let filteredStock;
+    if(filter === '') {
+      filteredStock = stocks;
+    } else {
+    filteredStock = stocks.filter(s => s.companyName.startsWith(filter.charAt(0).toLocaleUpperCase() + filter.slice(1)));
+    }
+
   const history = useHistory();
   const dispatch = useDispatch();
   const handleClick = async symbol => {
@@ -18,7 +25,7 @@ const Stocks = () => {
   };
   return (
     <section className="companies mt-3">
-      {filtered.map(stock => (
+      {filteredStock.map(stock => (
         <div key={stock.ticker} className="company">
           <h5 className="text-white">{stock.companyName}</h5>
           <span className="symbol">{stock.ticker}</span>
