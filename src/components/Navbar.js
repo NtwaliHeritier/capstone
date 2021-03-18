@@ -10,10 +10,10 @@ const Navbar = () => {
   const handleChange = e => {
     const filter = e.target.value;
     let filteredStock;
-    if(e.target.value) {
-    filteredStock = stocks.filter(s => s.companyName.startsWith(filter.charAt(0).toLocaleUpperCase() + filter.slice(1)));
-    } else {
+    if(e.target.value === '') {
       filteredStock = stocks;
+    } else {
+    filteredStock = stocks.filter(s => s.companyName.startsWith(filter.charAt(0).toLocaleUpperCase() + filter.slice(1)));
     }
     dispatch(ADD_FILTER(filteredStock));
   };

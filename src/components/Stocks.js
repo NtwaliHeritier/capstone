@@ -6,7 +6,9 @@ import axios from 'axios';
 import { ADD_COMPANY_INFO } from '../actions/stock_action';
 
 const Stocks = () => {
+  const stocks = useSelector(store => store.stocks);
   const filter = useSelector(store => store.filter);
+  const filtered = filter ? filter : stocks; 
   const history = useHistory();
   const dispatch = useDispatch();
   const handleClick = async symbol => {
@@ -16,7 +18,7 @@ const Stocks = () => {
   };
   return (
     <section className="companies mt-3">
-      {filter.map(stock => (
+      {filtered.map(stock => (
         <div key={stock.ticker} className="company">
           <h5 className="text-white">{stock.companyName}</h5>
           <span className="symbol">{stock.ticker}</span>
