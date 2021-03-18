@@ -13,7 +13,7 @@ import filterReducer from './reducers/filterReducer';
 const combinedReducers = combineReducers({
   stocks: stockReducer,
   info: companyReducer,
-  filter: filterReducer
+  filter: filterReducer,
 });
 const store = createStore(combinedReducers);
 

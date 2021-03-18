@@ -1,10 +1,10 @@
-const filterReducer = (state = "", action) => {
-  switch(action.type) {
+const filterReducer = (state = '', action) => {
+  switch (action.type) {
     case 'ADD_FILTER':
-      return state.filter(s => state.companyName === s);
+      return action.payload;
     default:
-      return state;  
+      return state;
   }
-}
+};
 
 export default filterReducer;
