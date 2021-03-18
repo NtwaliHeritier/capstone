@@ -1,15 +1,20 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
 import { ADD_FILTER } from '../actions/stock_action';
 import '../css/index.css';
 
 const Navbar = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const handleChange = e => {
     const filter = e.target.value;
     dispatch(ADD_FILTER(filter));
   };
+
+  const showNews = () => {
+    history.push("/news");
+  }
 
   return (
     <nav className="navbar navbar-expand-lg mt-3 px-5">
@@ -20,7 +25,7 @@ const Navbar = () => {
       <div className="collapse navbar-collapse ml-5" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item dropdown">
-            News
+            <button className="btn-news" onClick={showNews}>News</button>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">

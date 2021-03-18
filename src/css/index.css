@@ -16,6 +16,14 @@
 	color: #00c4a7;
 }
 
+.btn-news {
+	background: none;
+	color: white;
+	border: none;
+	font-weight: bold;
+	font-size: 18px;
+}
+
 .loader-div {
 	height: 100vh;
 }

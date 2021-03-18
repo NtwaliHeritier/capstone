@@ -7,11 +7,14 @@
 	color: white;
 }
 
-.stock-details img {
-	width: 10vw;
-	height: 30vh;
-	display: block;
-	margin: 0 auto;
+.project-description {
+	width: 80%;
+	margin: auto;
+}
+
+.project-description img {
+	float: left;
+	padding: 10px 20px;
 }
 
 .stock-details span {

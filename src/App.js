@@ -9,6 +9,7 @@ import './css/index.css';
 import './App.css';
 import { ADD_TO_STOCK } from './actions/stock_action';
 import Info from './components/Info';
+import News from './components/News';
 
 function App() {
   const dispatch = useDispatch();
@@ -44,7 +45,8 @@ function App() {
         <Navbar />
         <Switch>
           <Route component={Stocks} exact path="/" />
-          <Route component={Info} path="/info" />
+          <Route component={Info} exact path="/info" />
+          <Route component={News} exact path="/news" />
         </Switch>
       </BrowserRouter>
     </div>
