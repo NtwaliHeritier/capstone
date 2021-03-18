@@ -15,6 +15,10 @@ In this project, I fetched data from a finance api and used react and redux to b
 
 [Live demo](https://react-capsto-feature-8ptxznmpp.herokuapp.com/)
 
+## Video presentation
+
+[Live Demo Link](https://www.youtube.com/watch?v=S5jVsnsgmC0)
+
 ## Screenshots
 
 ![screenshot](./screenshots/index.PNG)
