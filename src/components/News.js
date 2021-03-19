@@ -16,14 +16,14 @@ const News = () => {
   return ( 
       <div className="news-container">
         {news.map(myNew => <div className="news" key={myNew.title}>
-              <img src={myNew.image} alt="" />
-              <div className="news-specs px-4">
                 <h5 className="text-center my-2">{myNew.title}</h5>
-                <span className="p-2 my-2 d-block">Published on: &nbsp;{myNew.publishedDate}</span>
+                <span className="p-2 my-2 d-block text-center">Published on: &nbsp;{myNew.publishedDate}</span>
+                <div className="news-specs px-4 d-flex">
+                <img src={myNew.image} alt="" />
                 <p>{myNew.text}</p>
+                </div>
                 <a className="details btn" href={myNew.url} target="_blank">READ MORE</a>
               </div>
-            </div>
         )}
       </div>
 
