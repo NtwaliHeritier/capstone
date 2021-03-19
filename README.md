@@ -61,8 +61,6 @@ Most important, enjoy the app!<br>
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/NtwaliHeritier/math-magicians).
-
 ### Show your support
 
 Give a ⭐️ if you like this project!
