@@ -1,94 +1,96 @@
 .navbar-brand {
-  color: #00c4a7;
-  font-size: 2.5em;
+	color: #00c4a7;
+	font-size: 2.5em;
 }
 
 .navbar-brand:hover {
-  color: white;
+	color: white;
 }
 
 .nav-link {
-  color: white;
-  font-size: 18px;
+	color: white;
+	font-size: 18px;
 }
 
 .nav-link:hover {
-  color: #00c4a7;
+	color: #00c4a7;
 }
 
 .btn-news {
-  background: none;
-  color: white;
-  border: none;
-  font-weight: bold;
-  font-size: 18px;
+	background: none;
+	color: white;
+	border: none;
+	font-weight: bold;
+	font-size: 18px;
 }
 
 .loader-div {
-  height: 100vh;
+	height: 100vh;
 }
 
 .companies {
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .company {
-  width: 23%;
-  margin: 0 1% 1%;
-  padding: 1%;
-  box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.79);
+	width: 23%;
+	margin: 0 1% 1%;
+	padding: 1%;
+	box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.79);
 }
 
 .symbol {
-  color: rgb(175, 169, 169);
+	color: rgb(175, 169, 169);
 }
 
 .price {
-  color: #00c4a7;
+	color: #00c4a7;
 }
 
 .finances {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .details {
-  width: 100%;
-  color: #00c4a7;
-  border: 1px solid #00c4a7;
-  border-radius: 5px;
+	color: #00c4a7;
+	background: none;
+	display: block;
+	border-radius: 5px;
+	border: none;
 }
 
 .details:hover {
-  background-color: #00c4a7;
-  color: white;
+	background-color: #00c4a7;
+	color: white;
+	padding: 5px;
 }
 
 @media screen and (max-width: 1024px) {
-  .company {
-    width: 31%;
-    margin: 0 1% 1%;
-  }
+	.company {
+		width: 31%;
+		margin: 0 1% 1%;
+	}
 }
 
 @media screen and (max-width: 1024px) {
-  .company {
-    width: 31%;
-    margin: 0 1% 1%;
-  }
+	.company {
+		width: 31%;
+		margin: 0 1% 1%;
+	}
 }
 
 @media screen and (max-width: 768px) {
-  .company {
-    width: 47%;
-    margin: 0 1.5% 1%;
-  }
+	.company {
+		width: 47%;
+		margin: 0 1.5% 1%;
+	}
 }
 
 @media screen and (max-width: 500px) {
-  .company {
-    width: 96%;
-    margin: 0 2% 2%;
-  }
+	.company {
+		width: 96%;
+		margin: 0 2% 2%;
+	}
 }

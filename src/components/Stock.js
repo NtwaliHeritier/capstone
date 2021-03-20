@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { ADD_COMPANY_INFO } from '../actions/stock_action';
 import { useHistory } from 'react-router';
+import '../css/index.css';
 
 const Stock = ({stock}) => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const Stock = ({stock}) => {
             <span className={stock.changes > 0 ? 'price' : 'text-danger'}>{stock.changes}</span>
             <span>{stock.price}</span>
           </div>
-          <button type="submit" className="details btn" onClick={() => handleClick(stock.ticker)}>Details</button>
+          <button type="submit" className="details" onClick={() => handleClick(stock.ticker)}>Details</button>
           </>
    );
 }

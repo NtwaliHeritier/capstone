@@ -1,26 +1,46 @@
 .stock-title {
-  color: #00c4a7;
-  font-size: 2.5em;
+	color: #00c4a7;
+	font-size: 2.5em;
 }
 
 .stock-title:hover {
-  color: white;
+	color: white;
 }
 
-.project-description {
-  width: 80%;
-  margin: auto;
+.title-flex {
+	justify-content: space-between;
 }
 
 .project-description img {
-  float: left;
-  padding: 10px 20px;
+	float: left;
+	padding: 10px 20px;
 }
 
 .stock-details span {
-  font-size: 18px;
+	font-size: 18px;
 }
 
 .stock-details-p {
-  font-size: 18px;
+	font-size: 18px;
+	width: 100%;
+}
+
+@media screen and (max-width: 869px) {
+	.title-flex {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.project-description {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.project-description img {
+		align-self: center;
+	}
+
+	.stock-details-p {
+		width: 95%;
+	}
 }
