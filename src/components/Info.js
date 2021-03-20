@@ -24,7 +24,7 @@ const Info = () => {
         </div>
         <div className="project-description">
           <img src={info.image} alt="" />
-          <p className="mt-4 stock-details-p px-5">{info.description}</p>
+          <p className="stock-details-p px-5">{info.description}</p>
         </div>
       </div>
     </section>
