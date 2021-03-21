@@ -1,0 +1,43 @@
+.stock-title {
+  color: #00c4a7;
+  font-size: 2.5em;
+}
+
+.stock-title:hover {
+  color: white;
+}
+
+.title-flex {
+  justify-content: space-between;
+}
+
+.project-description img {
+  float: left;
+  padding: 0 20px;
+}
+
+.stock-details span {
+  font-size: 18px;
+}
+
+.stock-details-p {
+  font-size: 18px;
+  width: 100%;
+  margin-top: 1%;
+}
+
+@media screen and (max-width: 869px) {
+  .title-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-description img {
+    align-self: center;
+  }
+}
