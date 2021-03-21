@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import '../css/news.css';
+import ApiCall from '../modules/apicall';
 
 const News = () => {
   const [news, setNews] = useState([]);
   const loadNews = async () => {
-    const myNews = await axios.get('https://financialmodelingprep.com/api/v3/stock_news?limit=50&apikey=18e14f4a06420f6541dc232dea254989');
+    const myNews = await ApiCall.callNews();
     setNews(myNews.data);
   }
 

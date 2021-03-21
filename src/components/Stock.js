@@ -4,12 +4,13 @@ import axios from 'axios';
 import { ADD_COMPANY_INFO } from '../actions/stock_action';
 import { useHistory } from 'react-router';
 import '../css/index.css';
+import ApiCall from '../modules/apicall';
 
 const Stock = ({stock}) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const handleClick = async symbol => {
-    const companyInfo = await axios.get(`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=18e14f4a06420f6541dc232dea254989`);
+    const companyInfo = await ApiCall.callDetails(symbol);
     dispatch(ADD_COMPANY_INFO(companyInfo.data[0]));
     history.push('/info');
   };

@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loader from 'react-loader-spinner';
@@ -10,6 +9,7 @@ import './App.css';
 import { ADD_TO_STOCK } from './actions/stock_action';
 import Info from './components/Info';
 import News from './components/News';
+import ApiCall from './modules/apicall';
 
 function App() {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ function App() {
 
   const fetchData = async () => {
     setLoader(true);
-    const stockApi = await axios.get('https://financialmodelingprep.com/api/v3/actives?apikey=18e14f4a06420f6541dc232dea254989');
+    const stockApi = await ApiCall.callStocks();
     dispatch(ADD_TO_STOCK(stockApi.data));
     setLoader(false);
   };

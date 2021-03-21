@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/index.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Stock from './Stock';
 
 const Stocks = () => {
